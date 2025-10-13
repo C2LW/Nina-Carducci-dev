@@ -75,8 +75,16 @@ body {
 
 .picture img {
 	width: 100%;
+	height: auto;
+	object-fit: cover;
 
 }
+
+.w-100 {
+	object-fit: contain;
+	height: auto;
+}
+
 #about-me {
 	flex: 2
 }
@@ -111,9 +119,11 @@ body {
 /*	Correction .nav-link.active en .nav-link.active-tag	*/
 .nav-pills .nav-link.active-tag, .nav-pills .show > .nav-link {
 	color: #fff;	
-	background-color: #BEB45A;
+	background-color: #5b551d;
 	border-radius:0 ;
 }
+
+/*#beb13c*/
 
 /*  Add cursor pointer to filter  */
 .nav-pills .nav-link {
@@ -213,7 +223,11 @@ body {
 
 #contact .container {
 	display: flex;
+	flex-direction: row;
+	align-items: center;
+	flex-wrap: wrap;
 }
+
 .picture.right::before {
 	content: ' ';
 	background-color: #BEB45A;
@@ -226,12 +240,13 @@ body {
 }
 .form-container {
 	flex : 2;
+	width: 50%;
 
 }
 form {
 	display: flex;
 	flex-direction: column;
-	width: 70%;
+	width: 100%;
 	align-items: flex-start;
 }
 
@@ -255,6 +270,10 @@ form textarea {
 input[type="submit"] {
 	background-color: #BEB45A;
 	padding: .5em 1em
+}
+
+.carousel-control-prev-icon {
+	background-color: rgb(0, 0, 0);
 }
 
 @media all and (max-width: 1180px) {
@@ -364,6 +383,9 @@ input[type="submit"] {
 	}
 	.picture {
 		width: 80%;
+	}
+	.form-container {
+		width: 100%;
 	}
 }
 
